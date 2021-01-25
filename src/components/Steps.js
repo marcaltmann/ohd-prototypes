@@ -13,7 +13,7 @@ export default function Steps({
         <div>
             <Stepper
                 className="mb-3"
-                steps={['Step 1', 'Step 2: Media upload', 'Step 3']}
+                steps={['Schritt 1', 'Schritt 2: Medien-Upload', 'Schritt 3']}
                 current={current}
                 onSetStep={setCurrent}
             />

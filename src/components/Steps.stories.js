@@ -11,8 +11,8 @@ const Template = args => <Steps {...args} />;
 export const Default = Template.bind({});
 Default.args = {
     children: [
-        <h1 key="step1">Step 1</h1>,
+        <h1 key="step1">Schritt 1</h1>,
         <Step2 key="step2" />,
-        <h1 key="step3">Step 3</h1>
+        <h1 key="step3">Schritt 3</h1>
     ],
 };
