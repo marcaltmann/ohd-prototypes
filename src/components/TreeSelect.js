@@ -30,6 +30,41 @@ const data = [
             },
         ],
     },
+    {
+        label: 'Orte',
+        value: 3,
+        children: [
+            {
+                label: 'Griechenland',
+                value: 56721,
+                children: [
+                    {
+                        label: 'Attika',
+                        value: 34849,
+                    },
+                    {
+                        label: 'Peloponnes',
+                        value: 34810,
+                        disabled: true,
+                    },
+                    {
+                        label: 'Zypern',
+                        value: 34899,
+                    },
+                ],
+            },
+            {
+                label: 'England',
+                value: 6132,
+                children: [
+                    {
+                        label: 'Greater London',
+                        value: 232,
+                    },
+                ],
+            },
+        ],
+    },
 ];
 
 const onChange = (currentNode, selectedNodes) => {
@@ -53,6 +88,8 @@ export default function TreeSelect() {
                 onChange={onChange}
                 onAction={onAction}
                 onNodeToggle={onNodeToggle}
+                keepTreeOnSearch
+                keepChildrenOnSearch
                 texts={{
                     placeholder: 'Auswählen…'
                 }}
