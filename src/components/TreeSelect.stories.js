@@ -9,6 +9,5 @@ const Template = args => <TreeSelect {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-    children: [
-    ],
+    multiSelect: true,
 };

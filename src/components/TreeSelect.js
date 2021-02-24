@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import DropdownTreeSelect from 'react-dropdown-tree-select';
 import 'react-dropdown-tree-select/dist/styles.css';
 
@@ -79,11 +81,13 @@ const onNodeToggle = currentNode => {
     console.log('onNodeToggle::', currentNode)
 };
 
-export default function TreeSelect() {
+export default function TreeSelect({
+    multiSelect = true,
+}) {
     return (
         <div>
             <DropdownTreeSelect
-                mode="hierarchical"
+                mode={multiSelect ? 'hierarchical' : 'radioSelect'}
                 data={data}
                 onChange={onChange}
                 onAction={onAction}
@@ -97,3 +101,7 @@ export default function TreeSelect() {
         </div>
     );
 }
+
+TreeSelect.propTypes = {
+    multiSelect: PropTypes.bool,
+};
